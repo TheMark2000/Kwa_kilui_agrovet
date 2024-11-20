@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwa-Kilui Agrovet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: blue;
+            text-align: center;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .services, .contact {
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Kwa-Kilui Agrovet</h1>
+        <p>Your one-stop agrovet for all your agricultural needs</p>
+    </header>
+    
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="{% url 'enroll' %}">Register</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+        </ul>
+    </nav>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Quality Animal Feeds</li>
+            <li>Farm Equipment</li>
+            <li>Seeds and Fertilizers</li>
+            <li>Expert Agricultural Advice</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Location: Located at Kwa-kilui market, off the main road</p>
+        <p>Phone: 0721892173/0710930725</p>
+        <p>Email: info@kwakiluiagrovet.com</p>
+    </section>
+</body>
+</html>

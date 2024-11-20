@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #enrollid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .registration-form {
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 5px 0px #ccc;
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-form">
+        <h2>Member Registration</h2>
+        <form action="process_registration.php" method="post">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Input 10 digits" required>
+          </div>
+          
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="residence">Residence:</label>
+                <select id="residence" name="residence" class="form-select" required>
+                    <option selected disabled>Choose...</option>
+                    <option value="Kwa-Kilui">Kwa-Kilui</option>
+                    <option value="Kiusyani">Kiusyani</option>
+                    <option value="Kwa-Vonza">Kwa-Vonza</option>
+                    <option value="Muselele">Muselele</option>
+                    <option value="King'atani">King'atani</option>
+                    <option value="Matulani">Matulani</option>
+                    <option value="Ilika">Ilika</option>
+                    <option value="Nthongoni">Nthongoni</option>
+                </select>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
